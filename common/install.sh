@@ -1,4 +1,5 @@
 # Define variables
+BASE_SCRIPT_DIR=$MODPATH/common/scripts
 BASE_LIB_DIR=$MODPATH/common/libs
 MODDED_LIB=com.qti.chi.override.so
 MODULE_LIB=$MODPATH/system/vendor/lib64/hw/$MODDED_LIB
@@ -13,7 +14,7 @@ ui_print " "
 ui_print "  Vol + / Up   = Next Option"
 ui_print "  Vol - / Down = Finalize Selection"
 ui_print " "
-ui_print "  1. OxygenOS 11"
+ui_print "  1. OxygenOS 11 (Aux enabler won\'t work)"
 ui_print "  2. OxygenOS 12"
 ui_print "  3. OxygenOS 13"
 ui_print " "
@@ -41,6 +42,7 @@ case $SELECTION in
 	ui_print " "
 	ui_print "- Copying appropriate modded library"
 	cp_ch "$BASE_LIB_DIR"/oos11/$MODDED_LIB "$MODULE_LIB"
+  ui_print "- Skipping aux enabler patch"
 	;;
   2)
     ui_print " "
@@ -61,3 +63,37 @@ case $SELECTION in
 	cp_ch "$BASE_LIB_DIR"/oos13/$MODDED_LIB "$MODULE_LIB"
 	;;
 esac
+
+# Only run aux enabler on OxygenOS 12+
+if [ $SELECTION -gt 1 ]; then
+  # Use volume key selection to choose the device
+  ui_print " "
+  ui_print " "
+  ui_print "- Please select your device by"
+  ui_print "  pressing the desired volume button:"
+  ui_print " "
+  ui_print "  Vol + / Up   = OnePlus 9 Pro"
+  ui_print "  Vol - / Down = OnePlus 9 (non-pro)"
+
+  if chooseport 30; then
+    ui_print " "
+  	ui_print "- Selected Device:"
+  	ui_print " "
+  	ui_print "  OnePlus 9 Pro"
+  	ui_print " "
+  	ui_print "- Copying appropriate aux enabler"
+    ui_print "  script"
+  	cp_ch "$BASE_SCRIPT_DIR"/op9pro/post-fs-data.sh "$MODPATH"
+  else
+    ui_print " "
+  	ui_print "- Selected Device:"
+  	ui_print " "
+  	ui_print "  OnePlus 9 (non-pro)"
+  	ui_print " "
+  	ui_print "- Copying appropriate aux enabler"
+    ui_print "  script"
+  	cp_ch "$BASE_SCRIPT_DIR"/op9/post-fs-data.sh "$MODPATH"
+  fi
+fi
+
+ui_print " "
