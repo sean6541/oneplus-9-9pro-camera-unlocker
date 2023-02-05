@@ -36,32 +36,32 @@ done
 case $SELECTION in
   1)
     ui_print " "
-	ui_print "- Selected Vendor Firmware:"
-	ui_print " "
-	ui_print "  OxygenOS 11"
-	ui_print " "
-	ui_print "- Copying appropriate modded library"
-	cp_ch "$BASE_LIB_DIR"/oos11/$MODDED_LIB "$MODULE_LIB"
-  ui_print "- Skipping aux enabler patch"
-	;;
+    ui_print "- Selected Vendor Firmware:"
+    ui_print " "
+    ui_print "  OxygenOS 11"
+    ui_print " "
+    ui_print "- Copying appropriate modded library"
+    cp_ch "$BASE_LIB_DIR"/oos11/$MODDED_LIB "$MODULE_LIB"
+    ui_print "- Skipping aux enabler patch"
+    ;;
   2)
     ui_print " "
-	ui_print "- Selected Vendor Firmware:"
-	ui_print " "
-	ui_print "  OxygenOS 12"
-	ui_print " "
-	ui_print "- Copying appropriate modded library"
-	cp_ch "$BASE_LIB_DIR"/oos12/$MODDED_LIB "$MODULE_LIB"
-	;;
+    ui_print "- Selected Vendor Firmware:"
+    ui_print " "
+    ui_print "  OxygenOS 12"
+    ui_print " "
+    ui_print "- Copying appropriate modded library"
+    cp_ch "$BASE_LIB_DIR"/oos12/$MODDED_LIB "$MODULE_LIB"
+    ;;
   3)
     ui_print " "
-	ui_print "- Selected Vendor Firmware:"
-	ui_print " "
-	ui_print "  OxygenOS 13"
-	ui_print " "
-	ui_print "- Copying appropriate modded library"
-	cp_ch "$BASE_LIB_DIR"/oos13/$MODDED_LIB "$MODULE_LIB"
-	;;
+    ui_print "- Selected Vendor Firmware:"
+    ui_print " "
+    ui_print "  OxygenOS 13"
+    ui_print " "
+    ui_print "- Copying appropriate modded library"
+    cp_ch "$BASE_LIB_DIR"/oos13/$MODDED_LIB "$MODULE_LIB"
+    ;;
 esac
 
 # Only run aux enabler on OxygenOS 12+
@@ -77,22 +77,22 @@ if [ $SELECTION -gt 1 ]; then
 
   if chooseport 30; then
     ui_print " "
-  	ui_print "- Selected Device:"
-  	ui_print " "
-  	ui_print "  OnePlus 9 Pro"
-  	ui_print " "
-  	ui_print "- Copying appropriate aux enabler"
+    ui_print "- Selected Device:"
+    ui_print " "
+    ui_print "  OnePlus 9 Pro"
+    ui_print " "
+    ui_print "- Copying appropriate aux enabler"
     ui_print "  script"
-  	cp_ch "$BASE_SCRIPT_DIR"/op9pro/post-fs-data.sh "$MODPATH"
+    cp_ch "$BASE_SCRIPT_DIR"/op9pro/post-fs-data.sh "$MODPATH"
   else
     ui_print " "
-  	ui_print "- Selected Device:"
-  	ui_print " "
-  	ui_print "  OnePlus 9 (non-pro)"
-  	ui_print " "
-  	ui_print "- Copying appropriate aux enabler"
+    ui_print "- Selected Device:"
+    ui_print " "
+    ui_print "  OnePlus 9 (non-pro)"
+    ui_print " "
+    ui_print "- Copying appropriate aux enabler"
     ui_print "  script"
-  	cp_ch "$BASE_SCRIPT_DIR"/op9/post-fs-data.sh "$MODPATH"
+    cp_ch "$BASE_SCRIPT_DIR"/op9/post-fs-data.sh "$MODPATH"
   fi
 fi
 
