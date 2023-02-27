@@ -2,6 +2,6 @@ id=oneplus-9-9pro-camera-unlocker
 name=OnePlus 9 & 9 Pro Camera Unlocker
 version=v1.2
 versionCode=1200
-author=AnierinB, JeusChrit, Cartesian8445, Luk1377, shadowstep, sean6541
+author=AnierinB, JeusChrit, Cartesian8445, Luk1377, sean6541, shadowstep
 description=Unlocks face detection and all cameras for use by third party apps on the OnePlus 9 and 9 Pro
 updateJson=https://raw.githubusercontent.com/Magisk-Modules-Alt-Repo/oneplus-9-9pro-camera-unlocker/master/update.json

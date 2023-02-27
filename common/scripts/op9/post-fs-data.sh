@@ -1,3 +1,5 @@
+#!/system/bin/sh
+# This script will be executed in post-fs-data mode
 TMPFILE="${0%/*}/overridden_at_boot_DO_NOT_EDIT"
 
 if [[ -f "$TMPFILE" ]]; then rm "$TMPFILE"; fi
