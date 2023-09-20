@@ -1,6 +1,6 @@
 {
-  "version": "v1.2",
-  "versionCode": 1200,
-  "zipUrl": "https://github.com/Magisk-Modules-Alt-Repo/oneplus-9-9pro-camera-unlocker/releases/download/v1.2/OnePlus-9-9Pro-Camera-Unlocker-v1.2.zip",
-  "changelog": "https://raw.githubusercontent.com/Magisk-Modules-Alt-Repo/oneplus-9-9pro-camera-unlocker/master/changelog.md"
+    "version": "v2.0",
+    "versionCode": 2000,
+    "zipUrl": "https://github.com/sean6541/op9_series_camera_unlocker/releases/download/v2.0/op9_series_camera_unlocker.zip",
+    "changelog": "https://raw.githubusercontent.com/sean6541/op9_series_camera_unlocker/master/changelog.md"
 }
